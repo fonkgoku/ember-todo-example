@@ -6,15 +6,15 @@ export default Route.extend({
 
     return [{
       title: 'Go to store',
-      completed: false
+      isDone: false
     },
     {
       title: 'Read a book',
-      completed: false
+      isDone: false
     },
     {
       title: 'Do stuff',
-      completed: true
+      isDone: true
     }];
 
     /* Actual response from ember data */

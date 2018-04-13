@@ -13,5 +13,12 @@ export default Component.extend({
   complete: computed('todos.@each.isDone', function() {
     let todos = this.get('todos');
     return todos.filterBy('isDone', true);
-  })
+  }),
+
+  actions: {
+    toggleComplete() {
+      const showComplete = this.get('showComplete');
+      this.set('showComplete', !showComplete);
+    }
+  }
 });

@@ -1,1 +1,11 @@
 @import "milligram";
+
+.container {
+  margin-top: 30px;
+}
+
+.todo-list {
+  .is-done {
+    text-decoration: line-through;
+  }
+}
