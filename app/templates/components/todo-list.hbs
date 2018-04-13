@@ -1,5 +1,11 @@
-<ul>
-  {{#each todos as |todo|}}
-  <li>{{todo.title}}</li>
+<ul class="todo-list todo-list-completed">
+  {{#each incomplete as |todo|}}
+    {{todo-item model=todo}}
   {{/each}}
+  <hr>
+  {{#if showComplete}}
+    {{#each complete as |todo|}}
+      {{todo-item model=todo}}
+    {{/each}}
+  {{/if}}
 </ul>
