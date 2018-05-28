@@ -6,6 +6,11 @@
   </div>
   <div class="row">
     <div class="column">
+      {{input type="text" value=todoTitle placeholder="Add todo" id="addTodoInput" enter="addTodoAndClear"}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
       {{todo-list todos=model}}
     </div>
   </div>

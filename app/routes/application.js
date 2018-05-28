@@ -4,20 +4,29 @@ export default Route.extend({
   model() {
     /* Faux response with test data */
 
-    return [{
-      title: 'Go to store',
-      isDone: false
-    },
-    {
-      title: 'Read a book',
-      isDone: false
-    },
-    {
-      title: 'Do stuff',
-      isDone: true
-    }];
+    // return [{
+    //   title: 'Go to store',
+    //   isDone: false
+    // },
+    // {
+    //   title: 'Read a book',
+    //   isDone: false
+    // },
+    // {
+    //   title: 'Do stuff',
+    //   isDone: true
+    // }];
 
     /* Actual response from ember data */
-    // return this.get('store').findAll('todo');
+    return this.get('store').findAll('todo');
+  },
+
+  actions: {
+    addTodo(title) {
+      this.get('store').createRecord('todo', {
+        title,
+        isDone: false
+      });
+    }
   }
 });

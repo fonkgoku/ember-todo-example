@@ -9,5 +9,6 @@ export default Component.extend({
   click() {
     const isDone = this.get('isDone');
     this.set('isDone', !isDone);
+    this.get('model').save();
   }
 });
