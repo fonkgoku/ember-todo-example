@@ -1,17 +1,5 @@
-<div class="container">
-  <div class="row">
-    <div class="column">
-      <h1>Ember Todo Example</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="column">
-      {{input type="text" value=todoTitle placeholder="Add todo" id="addTodoInput" enter="addTodoAndClear"}}
-    </div>
-  </div>
-  <div class="row">
-    <div class="column">
-      {{todo-list todos=model}}
-    </div>
-  </div>
-</div>
+{{!-- The following component displays Ember's default welcome message. --}}
+{{welcome-page}}
+{{!-- Feel free to remove this! --}}
+
+{{outlet}}
