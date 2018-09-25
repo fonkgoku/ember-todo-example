@@ -1,6 +1,6 @@
-<ul class="todo-list todo-list-incomplete">
+<ul class="todo-list todo-list-completed">
   {{#each incomplete as |todo|}}
-    {{todo-item model=todo}}
+    {{todo-item todo=todo}}
   {{/each}}
 </ul>
 <button class="button {{if showComplete "button-outline"}}" {{action "toggleComplete"}}>Toggle Completed</button>
@@ -9,7 +9,7 @@
 <h4>Completed Tasks</h4>
 <ul class="todo-list todo-list-completed">
   {{#each complete as |todo|}}
-    {{todo-item model=todo}}
+    {{todo-item todo=todo}}
   {{/each}}
 </ul>
 {{/if}}
