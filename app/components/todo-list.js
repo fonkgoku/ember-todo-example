@@ -6,13 +6,11 @@ export default Component.extend({
   showComplete: false,
 
   incomplete: computed('todos.@each.isDone', function() {
-    let todos = this.get('todos');
-    return todos.filterBy('isDone', false);
+    return this.get('todos').filterBy('isDone', false);
   }),
 
   complete: computed('todos.@each.isDone', function() {
-    let todos = this.get('todos');
-    return todos.filterBy('isDone', true);
+    return this.get('todos').filterBy('isDone', true);
   }),
 
   actions: {
